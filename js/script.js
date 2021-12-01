@@ -20,20 +20,28 @@ button.addEventListener('click', function() {
     let value = select.value;
     if (value == 'easy'){
         containerMain.innerHTML = '';
+        let col = 10;
+        let row = 10;
         for (let counter = 1; counter <= 100; counter++) {
             // console.log(counter);
             const element = document.createElement('div');
             element.classList.add('box');
+            element.style.width = `calc(100% / ${col})`;
+            element.style.width = `calc(100% / ${row})`;
             element.innerHTML = counter;
             containerMain.append(element);
         }
     }
     else if (value == 'hard') {
         containerMain.innerHTML = '';
+        let col = 9;
+        let row = 9;
         for (let counter = 1; counter <= 81; counter++) {
             // console.log(counter);
             const element = document.createElement('div');
             element.classList.add('box');
+            element.style.width = `calc(100% / ${col})`;
+            element.style.width = `calc(100% / ${row})`;
             element.innerHTML = counter;
             containerMain.append(element);
         }
@@ -41,10 +49,14 @@ button.addEventListener('click', function() {
     }
     else {
         containerMain.innerHTML = '';
+        let col = 7;
+        let row = 7;
         for (let counter = 1; counter <= 49; counter++) {
             // console.log(counter);
             const element = document.createElement('div');
             element.classList.add('box');
+            element.style.width = `calc(100% / ${col})`;
+            element.style.width = `calc(100% / ${row})`;
             element.innerHTML = counter;
             containerMain.append(element);
         }
