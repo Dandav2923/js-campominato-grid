@@ -5,6 +5,11 @@
 .bg-color-blue {
     background-color: dodgerblue;
 }
+
+.bg-white {
+  background-color: white;
+}
+
 .box {
   width: 75px;
   height: 75px;
@@ -13,3 +18,4 @@
   justify-content: center;
   align-items: center;
 }
+

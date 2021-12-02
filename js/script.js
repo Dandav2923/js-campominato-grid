@@ -8,8 +8,6 @@ difficulty.classList.add('fs-3', 'me-2')
 difficulty.append(string);
 containerHeader.append(difficulty);
 
-
-
 // far vedere la griglia al click della option
 let button = document.getElementById('button'); 
 // console.log(button);
@@ -45,7 +43,6 @@ button.addEventListener('click', function() {
             element.innerHTML = counter;
             containerMain.append(element);
         }
-        
     }
     else {
         containerMain.innerHTML = '';
@@ -61,6 +58,13 @@ button.addEventListener('click', function() {
             containerMain.append(element);
         }
     }
-    
-    
+    for (let counter = 1; counter <= 100; counter++) {
+    let box = document.querySelector('.box');
+    console.log(box);
+    box.addEventListener ('click', function() {
+        box.classList.add('bg-white');
+        let nextBox = box.nextElementSibling;
+        nextBox.classList.add('bg-white');
+    }); 
+    } 
 });
