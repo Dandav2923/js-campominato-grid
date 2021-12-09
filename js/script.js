@@ -73,3 +73,10 @@ button.addEventListener('click', function() {
         }
     }
 });
+
+        let bombs = [];
+        while (bombs.length < 16) {
+            let r = Math.floor(Math.random() * 100) + 1;
+            if (bombs.indexOf(r) === -1) bombs.push(r);
+        }
+        console.log(bombs);
