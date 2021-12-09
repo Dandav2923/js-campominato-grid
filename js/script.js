@@ -26,10 +26,15 @@ button.addEventListener('click', function() {
             element.classList.add('box');
             element.style.width = `calc(100% / ${col})`;
             element.style.width = `calc(100% / ${row})`;
+            element.addEventListener('click', function (){
+                element.classList.add('bg-white');
+            }
+            );
             element.innerHTML = counter;
             containerMain.append(element);
         }
     }
+    // creazione della griglia 9x9
     else if (value == 'hard') {
         containerMain.innerHTML = '';
         let col = 9;
@@ -40,10 +45,15 @@ button.addEventListener('click', function() {
             element.classList.add('box');
             element.style.width = `calc(100% / ${col})`;
             element.style.width = `calc(100% / ${row})`;
+            element.addEventListener('click', function () {
+                element.classList.add('bg-white');
+            }
+            );
             element.innerHTML = counter;
             containerMain.append(element);
         }
     }
+    // creazione della griglia 7x7
     else {
         containerMain.innerHTML = '';
         let col = 7;
@@ -54,17 +64,12 @@ button.addEventListener('click', function() {
             element.classList.add('box');
             element.style.width = `calc(100% / ${col})`;
             element.style.width = `calc(100% / ${row})`;
+            element.addEventListener('click', function () {
+                element.classList.add('bg-white');
+            }
+            );
             element.innerHTML = counter;
             containerMain.append(element);
         }
     }
-    for (let counter = 1; counter <= 100; counter++) {
-    let box = document.querySelector('.box');
-    console.log(box);
-    box.addEventListener ('click', function() {
-        box.classList.add('bg-white');
-        let nextBox = box.nextElementSibling;
-        nextBox.classList.add('bg-white');
-    }); 
-    } 
 });
